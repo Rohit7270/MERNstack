@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex Properties</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #a8b894;
+            padding: 10px;
+        }
+
+        /* Main container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100vh;
+        }
+
+        /* Top row */
+        .top-row {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            height: 100px;
+        }
+
+        .pink-box {
+            background: #c98686;
+            flex: 1;
+        }
+
+        /* Bottom section */
+        .bottom-section {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            flex: 1;
+        }
+
+        /* Left box with centered yellow square */
+        .left-box {
+            background: #7d8471;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .yellow-square {
+            background: #f4f07c;
+            width: 90px;
+            height: 80px;
+        }
+
+        /* Right column */
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .green-box {
+            background: #a8b87d;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top row: 3 pink boxes -->
+        <div class="top-row">
+            <div class="pink-box"></div>
+            <div class="pink-box"></div>
+            <div class="pink-box"></div>
+        </div>
+
+        <!-- Bottom section -->
+        <div class="bottom-section">
+            <!-- Left: gray box with centered yellow square -->
+            <div class="left-box">
+                <div class="yellow-square"></div>
+            </div>
+
+            <!-- Right: 4 green boxes stacked vertically -->
+            <div class="right-column">
+                <div class="green-box"></div>
+                <div class="green-box"></div>
+                <div class="green-box"></div>
+                <div class="green-box"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
